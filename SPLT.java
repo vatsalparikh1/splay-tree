@@ -9,7 +9,7 @@ public class SPLT implements SPLT_Interface{
     this.size = 0;
   } 
   
-  public BST_Node getRoot() { //please keep this in here! I need your root node to test your tree!
+  public BST_Node getRoot() {
     return root;
   }
 
@@ -29,10 +29,10 @@ public void insert(String s) {
 		
 		root = toSplay;
 		
-		if(root.justMade){//increase size if newly created
+		if(root.justMade){
 			size += 1;
 			root.justMade = false;
-		}else{ //don't increase size if inserting would be duplicate
+		}else{
 			
 			return;
 		}
@@ -137,7 +137,7 @@ public boolean empty() {
 }
 
 @Override
-public boolean contains(String s) {//double check this method
+public boolean contains(String s) {
 	if (empty()) {
 		return false;
 	}

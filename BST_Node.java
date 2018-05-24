@@ -13,7 +13,7 @@ public class BST_Node {
     this.justMade=true;
   }
   
-  BST_Node(String data, BST_Node left,BST_Node right,BST_Node par){ //feel free to modify this constructor to suit your needs
+  BST_Node(String data, BST_Node left,BST_Node right,BST_Node par){ 
     this.data=data;
     this.left=left;
     this.right=right;
@@ -61,13 +61,13 @@ public class BST_Node {
 			}
 			return right.insertNode(s);
 		}
-		return this;//ie we have a duplicate
+		return this;
 	  
-  } //Really same logic as above note
+  }
   
   public boolean removeNode(String s){ 
 	  return false; 
-  } //I personal do not use the removeNode internal method in my impl since it is rather easily done in SPLT, feel free to try to delegate this out, however we do not "remove" like we do in BST
+  } 
   
   public BST_Node findMin(){ 
 	  if(left!=null)return left.findMin();
